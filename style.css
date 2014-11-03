@@ -129,9 +129,13 @@ form {
 	
 .signature {
 	position: relative;
-	border-left: .1em #5e6a71 solid;
+	border-left-style: solid;
+	border-left-width: .1em;;
+	border-left-color: #5e6a71;
 	padding: 1em 0 1em 1.75em;
-	
+	}
+.inverted .signature {
+	border-left-color: white;
 	}
 	
 .unit {
