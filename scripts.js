@@ -52,17 +52,17 @@ $(document).ready(function(){
 	
 	
 	$("button.small").on('click', function() {
-		$(".block").css('font-size','10px');
+		$(".signature-block").css('font-size','10px');
 		$(this).closest('dd').siblings('dd').children('button').removeClass('active');
 		$(this).addClass('active');
 	})
 	$("button.medium").on('click', function() {
-		$(".block").css('font-size','20px');
+		$(".signature-block").css('font-size','20px');
 		$(this).closest('dd').siblings('dd').children('button').removeClass('active');
 		$(this).addClass('active');
 	})
 	$("button.large").on('click', function() {
-		$(".block").css('font-size','40px');
+		$(".signature-block").css('font-size','40px');
 		$(this).closest('dd').siblings('dd').children('button').removeClass('active');
 		$(this).addClass('active');
 	})
