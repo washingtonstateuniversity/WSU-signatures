@@ -33,7 +33,7 @@ Template: spine
     font-style: normal;
 
 }
-#jacket {
+xx#jacket {
 	overflow: visible !important;
 	}
 #binder {
@@ -65,7 +65,7 @@ body,
 	display: none;
 	}
 
-.block {
+.signature-block {
 	font-size: 100px;
 	font-size: 20px;
 	xxzoom: .25;
@@ -74,7 +74,7 @@ form {
 	font-size: 15px;
 	}
 
-.block {
+.signature-block {
 	color: #5e6a71;
 	xxcolor: red;
 	margin: 0 auto;
@@ -91,11 +91,11 @@ form {
     xxwidth: 4000px;
     box-sizing: border-box;
 }
-.block:hover {
+.signature-block:hover {
 	border-color: rgba(127,127,127,0.43);
 	}
 
-.block * {
+.signature-block * {
 	line-height: 1em;
 	}
 
@@ -163,6 +163,11 @@ form {
 .college,
 .campus {
 	display: none;
+	}
+.has-prefix .prefix,
+.has-college .college,
+.has-campus .campus {
+	display: block;
 	}
 
 input[name="prefix"]:checked ~ .block .prefix,
@@ -254,6 +259,12 @@ body.inverted form dl {
 	display: inline-block;
 	margin: 0;
 	}
+.controls dl select {
+	display: none;
+	}
+.controls dl.checked select {
+	display: block;
+	}
 
 /* Forms */
 	
@@ -306,8 +317,8 @@ form dd ~ dd {
 
 .unit:before,
 .signature:before,
-.block:before,
-.block:after,
+.signature-block:before,
+.signature-block:after,
 .signature:after,
 .shield:before,
 .shield:after {
@@ -326,14 +337,14 @@ form dd ~ dd {
 	top: -2000px;
 	}	
 
-.block:hover:before,
-.block:hover:after,
-.block:hover .unit:before,
-.block:hover .has-prefix.signature:after,
-.block:hover .signature:before,
-.block:hover .unit-title-one:before,
-.block:hover .shield:before,
-.block:hover .shield:after {
+.signature-block:hover:before,
+.signature-block:hover:after,
+.signature-block:hover .unit:before,
+.signature-block:hover .has-prefix.signature:after,
+.signature-block:hover .signature:before,
+.signature-block:hover .unit-title-one:before,
+.signature-block:hover .shield:before,
+.signature-block:hover .shield:after {
 	opacity: 0.25;
 	/*
 -webkit-transition: opacity .5s ease-in-out;
@@ -350,8 +361,8 @@ form dd ~ dd {
 	}
 
 .signature:after,
-.block:before,
-.block:after  {
+.signature-block:before,
+.signature-block:after  {
 	height: 1px;
 	top: 1em;
 	width: 8000px;
@@ -360,11 +371,11 @@ form dd ~ dd {
 .signature:after {
 	top: 3.1em;
 	}
-.block:before {
+.signature-block:before {
 	top: 1em;
 	background: red;
 	}
-.block:after {
+.signature-block:after {
 	top: auto;
 	bottom: 1em;
 	background: red;
@@ -373,7 +384,7 @@ form dd ~ dd {
 	left: 4em;
 	}
 
-.block:hover .unit {
+.signature-block:hover .unit {
 	box-shadow: inset 0px 0px 1px black;
 	}
 	
@@ -400,7 +411,11 @@ dl:after {
 
 @media print {
 
-	.block {
+	#jacket {
+		overflow: visible !important;
+		}
+
+	.signature-block {
 		xxfont-size: 20px;
 		border-color: rgba(127,127,127,0.58);
 	}
@@ -423,8 +438,8 @@ dl:after {
 		display: none;
 	}
 	.unit:before,
-	.block:before,
-	.block:after,
+	.signature-block:before,
+	.signature-block:after,
 	.signature:before,
 	.signature:after,
 	.shield:before,
