@@ -1,0 +1,438 @@
+/*
+Theme Name: WSU Signatures
+Theme URI: http://web.wsu.edu/spine
+Author: WSU University Communications
+Author URI: http://web.wsu.edu
+Description: Binding together the story of Washington State University.
+Version: 0.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: spine
+
+*/
+
+@font-face {
+    font-family: 'Stone Sans';
+    src: url('fonts/sans/stonesansiiitcstd-md-webfont.svg#stone_sans_ii_itc_stdmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stone Serif';
+    src: url('fonts/serif/stoneserif-medium-webfont.svg#stone_serifmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Stone Serif Italic';
+    src: url('fonts/serif/stoneserifitalic-medium-webfont.svg#stone_serif_italicmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#jacket {
+	overflow: visible !important;
+	}
+#binder {
+	padding: 0;
+	overflow: hidden;
+	xxbackground-image: url('example.png');
+	background-position: 3.7em 5.6em;
+	background-size: 43em auto;
+	background-repeat: no-repeat;
+	overflow: visible;
+	}
+	
+#xxbinder {
+	background-image: url('signature.png');
+	background-position: 3.25em 5.2em;
+	background-size: 44em auto;
+	}
+#binder {
+	xbackground-image: none;
+	}
+	
+html,
+body,
+#jacket {
+	background: none !important;
+	}
+
+#spine {
+	display: none;
+	}
+
+.block {
+	font-size: 100px;
+	font-size: 20px;
+	xxzoom: .25;
+	}
+form {
+	font-size: 15px;
+	}
+
+.block {
+	color: #5e6a71;
+	xxcolor: red;
+	margin: 0 auto;
+	font-family: "Stone Sans";
+	xxmargin-top: 50px;
+	border-width: 2.5em;
+	border-style: solid;
+	border-color: transparent;
+	padding-left: 6em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    display: inline-block;
+    xxwidth: 4000px;
+    box-sizing: border-box;
+}
+.block:hover {
+	border-color: rgba(127,127,127,0.43);
+	}
+
+.block * {
+	line-height: 1em;
+	}
+
+.shield,
+.unit {
+	float: left;
+	}
+
+.shield {
+	width: 6em;
+	padding-right: 2em;
+	position: absolute;
+	left: -6em;
+	background-image: url('svgs/shield.svg');
+	background-repeat: no-repeat;
+	background-size: 4em auto;
+	height: 5em;
+	}
+.has-prefix .shield  {
+	background-position: left 2.1em;
+	height: 7em;
+	}
+
+.unit,
+.college,
+.university,
+.campus {
+	xxpadding-left: 2em;
+	clear: both;
+	}
+	
+.signature {
+	position: relative;
+	border-left: .1em #5e6a71 solid;
+	padding: 1em 0 1em 1.75em;
+	
+	}
+	
+.unit {
+	padding-bottom: 1.6em;
+	xmargin-bottom: -.1em;
+	xxwidth: 2000px;
+	}
+.unit textarea {
+	color: #5e6a71;
+	font-family: "Stone Sans";
+	padding: 0;
+	margin: 0;
+	border: none;
+	height: auto;
+	min-height: 1px;
+	box-sizing: border-box;
+	background: transparent;
+	}
+.unit texarea:focus {
+	color: #b67233;
+	padding: 0;
+	margin: 0;
+	border: none !important;
+	outline: none !important;
+	height: 1em;
+	}
+
+.prefix,
+.college,
+.campus {
+	display: none;
+	}
+
+input[name="prefix"]:checked ~ .block .prefix,
+input[name="college"]:checked ~ .block .college,
+input[name="campus"]:checked ~ .block .campus {
+	display: block !important;
+	}
+
+.prefix {
+	font-size: 1.4em;
+	font-family: "Stone Serif Italic";
+	margin-top: -.025em;
+	margin-left: -.075em;
+	padding-bottom: .6em;
+	}
+	
+/* Unit Title */
+
+.unit .title {
+	font-size: 3.4em;
+	margin-top: -.1em;
+	line-height: 1em;
+	margin-left: -.075em;
+	letter-spacing: -.04em;
+	white-space: nowrap;
+	}
+.unit.single-line .title {
+	font-size: 4.5em;
+	line-height: 1em;
+	margin-bottom: -.05em;
+	letter-spacing: -.02em;
+	}
+.college {
+	font-size: 1.4em;
+	padding-bottom: .68em;
+	margin-left: -.1em;
+	white-space: nowrap;
+	letter-spacing: -.025em;
+	}
+.university {
+	line-height: 0;
+	left: -.3em;
+	position: relative;
+	background-image: url('svgs/WashingtonStateUniversity.svg');
+	background-repeat: no-repeat;
+	background-size: auto 1.35em;
+	top: -.05em;
+	margin-bottom: -.15em;
+	height: 1.35em;
+	width: 22.5em;
+	}
+.campus {
+	text-transform: uppercase;
+	padding-top: .425em;
+	font-size: 1.4em;
+	margin-left: -.07em;
+	margin-bottom: -.2em;
+	letter-spacing: .025em;
+	}
+	
+/* Inverted */
+
+body.inverted {
+	background-color: black !important;
+	}
+	
+body.inverted .block,
+body.inverted .gray {
+	color: white;
+	}
+body.inverted {
+	border-color: white;
+	}
+	
+body.inverted .university {
+	background-image: url('svgs/WashingtonStateUniversity-white.svg');
+	}
+body.inverted .shield {
+	background-image: url('svgs/shield-white.svg');
+	}
+body.inverted form dl {
+	border-top-color: #5e6a71;	
+	}
+
+/* Controls */
+
+.controls dt,
+.controls dd {
+	display: inline-block;
+	margin: 0;
+	}
+
+/* Forms */
+	
+form {
+	padding: 2em 0 0 0em;
+	width: 100%;
+	box-sizing: border-box;
+	}
+input[type="text"] {
+	width: 100%;
+	}
+form dl {
+	display: block;
+	clear: both;
+	padding: .3em 0 .3em 0;
+	border-top: 1px #e9e9e9 solid;
+	}
+form dt,
+form dd {
+	display: inline-block;
+	}
+form dt {
+	text-align: right;
+	width: 16em;
+	float: left;
+	clear: both;
+	color: #e9e9e9;
+	text-transform: uppercase;
+	}
+form dt:hover {
+	color: #bebebe;
+	}
+form dd {
+	padding-left: 0em;
+	margin: 0px;
+	display: block;
+	float: left;
+	width: 30em;
+	}
+form dd ~ dd {
+	clear: both;
+	margin-left: 16.3em;
+	}
+	
+.blank {
+	display: none;
+	}
+	
+/* Guides */
+
+.unit:before,
+.signature:before,
+.block:before,
+.block:after,
+.signature:after,
+.shield:before,
+.shield:after {
+	content: "";
+	position: absolute;
+	opacity: 0;
+	background: blue;
+	z-index: 99164;
+	}
+.signature:before,
+.unit:before,
+.shield:before,
+.shield:after {
+	width: 1px;
+	height: 4000px;
+	top: -2000px;
+	}	
+
+.block:hover:before,
+.block:hover:after,
+.block:hover .unit:before,
+.block:hover .has-prefix.signature:after,
+.block:hover .signature:before,
+.block:hover .unit-title-one:before,
+.block:hover .shield:before,
+.block:hover .shield:after {
+	opacity: 0.25;
+	/*
+-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity .5s ease-in-out;
+*/
+	}
+
+.signature:before {
+	left: -.1em;
+	background: green;
+	}
+
+.signature:after,
+.block:before,
+.block:after  {
+	height: 1px;
+	top: 1em;
+	width: 8000px;
+	left: -2000px;
+	}
+.signature:after {
+	top: 3.1em;
+	}
+.block:before {
+	top: 1em;
+	background: red;
+	}
+.block:after {
+	top: auto;
+	bottom: 1em;
+	background: red;
+	}
+.shield:after {
+	left: 4em;
+	}
+
+.block:hover .unit {
+	box-shadow: inset 0px 0px 1px black;
+	}
+	
+#shield-svg {
+	border: pink 5px solid;
+	}
+canvas {
+	padding: 0px;
+	display: none;
+	}
+
+.cf:before,
+.cf:after,
+dl:before,
+dl:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after,
+dl:after {
+    clear: both;
+}
+
+@media print {
+
+	.block {
+		xxfont-size: 20px;
+		border-color: rgba(127,127,127,0.58);
+	}
+	.university {
+		background-size: 22.5em 1.35em;
+		background-size: auto 20px;
+		background-size: auto 1.35em;
+		background-position: left top;
+	}
+	
+	xxbody.inverted {
+		background-color: transparent !important;
+	}
+	
+	.unprinted,
+	canvas,
+	input[type="checkbox"],
+	label,
+	hr {
+		display: none;
+	}
+	.unit:before,
+	.block:before,
+	.block:after,
+	.signature:before,
+	.signature:after,
+	.shield:before,
+	.shield:after {
+		display: none;
+	}
+	#spine {
+		display: none;	
+	}
+	
+}
